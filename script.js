@@ -29,7 +29,10 @@ async function fetchGitHubProjects() {
         "Games": {
             "Gravitys-Clutch": "",
             "Crossy_Road": "",
-            "Rasterizer": "Made a rasterizer in C"
+            "Rasterizer to Render a Video": "<p>Made a rasterizer in C using many advanced \n \
+                graphics techniques to make a video of a human heart <a href= 'https://www.youtube.com/shorts/fpVsFeTC4gM' > \
+                (Live Demo)</a></p>"
+            
         },
     };
 
