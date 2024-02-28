@@ -25,7 +25,7 @@ async function fetchGitHubProjects() {
             "Website to Predict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
                 trained and tuned multiple machine learning models including KNN, Logistic Regression, XG Boost, and ANN using \
                 python libraries such as scikit-learn and tensorflow-keras \
-                <a href= 'https://youtu.be/OWa2lT1wkWE' > \
+                <a href= 'https://youtu.be/73nwfpDMAlE' > \
                 (Live Demo)</a></p>",
 
             "Predicting-College-Graduation-Rate": "",
