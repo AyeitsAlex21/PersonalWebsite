@@ -16,7 +16,7 @@ async function fetchGitHubProjects() {
 
     const projects = {
         "Research": {
-            "Distributed-Attendance-Application": ""
+            "Dynamicly-Changing-Node-Topology": ""
         },
         "Full-Stack": {
             "eCommerce": ""
