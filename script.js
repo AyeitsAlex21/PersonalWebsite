@@ -80,6 +80,10 @@ async function fetchGitHubProjects() {
             categoryItem.appendChild(listElement);
             categoriesList.appendChild(categoryItem);
         });
+        
+        document.querySelectorAll('a').forEach(function(link) {
+            link.setAttribute('target', '_blank');
+        });
     } catch (error) {
         console.error('Error fetching GitHub projects:', error);
     }
@@ -88,3 +92,4 @@ async function fetchGitHubProjects() {
 document.addEventListener('DOMContentLoaded', function() {
     fetchGitHubProjects();
 });
+  
