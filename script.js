@@ -61,7 +61,7 @@ async function fetchGitHubProjects() {
                     listItem.innerHTML = `<strong>${repo.name}</strong>: ${description}`;
                     // Check if GitHub Pages is active
                     if (repo.has_pages) {
-                        listItem.innerHTML += ` <a href="${githubPagesUrl}" target="_blank">(Live Demo)</a>`;
+                        listItem.innerHTML += ` <p><a href="${githubPagesUrl}" target="_blank">(Live Demo)</a></p>`;
                     }
                     listItem.innerHTML += '<p><a href="${repo.html_url}" target="_blank">\nGithub repo link</a></p>'
                 }
