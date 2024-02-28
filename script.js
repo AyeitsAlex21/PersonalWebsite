@@ -22,11 +22,10 @@ async function fetchGitHubProjects() {
             "eCommerce": ""
         },
         "Machine Learning": {
-            "Website to Predict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
+            "Website to Pred<ict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
                 trained and tuned multiple machine learning models including KNN, Logistic Regression, XG Boost, and ANN using \
                 python libraries such as scikit-learn and tensorflow-keras \
-                <a href= 'https://youtu.be/73nwfpDMAlE' > \
-                (Live Demo)</a></p>",
+                <p><a href= 'https://youtu.be/73nwfpDMAlE' > (Live Demo)</a></p>",
 
             "Predicting-College-Graduation-Rate": "",
 
@@ -35,8 +34,8 @@ async function fetchGitHubProjects() {
         "Games": {
             "Gravitys-Clutch": "",
             "Crossy_Road": "",
-            "Rasterizer to Render a Video": "<p>Made a rasterizer in C using many advanced \n \
-                graphics techniques to make a video of a human heart <a href= 'https://www.youtube.com/shorts/fpVsFeTC4gM' > \
+            "Rasterizer to Render a Video": "Made a rasterizer in C using many advanced \n \
+                graphics techniques to make a video of a human heart <p><a href= 'https://www.youtube.com/shorts/fpVsFeTC4gM' > \
                 (Live Demo)</a></p>"
             
         },
