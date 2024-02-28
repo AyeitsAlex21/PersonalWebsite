@@ -22,7 +22,7 @@ async function fetchGitHubProjects() {
             "eCommerce": ""
         },
         "Machine Learning": {
-            "Website to Pred<ict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
+            "Website to Predict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
                 trained and tuned multiple machine learning models including KNN, Logistic Regression, XG Boost, and ANN using \
                 python libraries such as scikit-learn and tensorflow-keras \
                 <p><a href= 'https://youtu.be/73nwfpDMAlE' > (Live Demo)</a></p>",
@@ -80,7 +80,7 @@ async function fetchGitHubProjects() {
             categoryItem.appendChild(listElement);
             categoriesList.appendChild(categoryItem);
         });
-        
+
         document.querySelectorAll('a').forEach(function(link) {
             link.setAttribute('target', '_blank');
         });
