@@ -9,6 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => { // smooth scrollin
     });
 });
 
+
 async function fetchGitHubProjects() {
     const username = 'AyeitsAlex21'; // Your GitHub username
     const apiUrl = `https://api.github.com/users/${username}/repos`;
@@ -21,9 +22,9 @@ async function fetchGitHubProjects() {
             "eCommerce": ""
         },
         "Machine Learning": {
-            "Website to Predict Likelihood Employement": "NICE"
             "Predicting-College-Graduation-Rate": "",
             "MLOps_Library": "",
+            "Website to Predict Likelihood Employement": "NICE"
         },
         "Games": {
             "Gravitys-Clutch": "",
@@ -35,45 +36,46 @@ async function fetchGitHubProjects() {
     try {
         const response = await fetch(apiUrl);
         const repos = await response.json();
-        
+
         const projectsSection = document.querySelector('#projects');
-        projectsSection.innerHTML = '<h2>Relevant Projects</h2><ul class="categories-list">'; // Start categories list
+        projectsSection.innerHTML = '<h2>Relvant Projects</h2><ul class="categories-list" style="list-style-type: none;"></ul>'; // Use inline styles for simplicity
+
+        const categoriesList = document.querySelector('.categories-list');
 
         Object.keys(projects).forEach(category => {
-            const categoryList = document.createElement('li');
-            categoryList.classList.add('category');
-            categoryList.innerHTML = `<h3>${category}</h3>`;
+            const categoryItem = document.createElement('li');
+            categoryItem.innerHTML = `<h3 style="margin-bottom: 10;">${category}</h3>`;
             const listElement = document.createElement('ul');
+            listElement.style.paddingLeft = "20px"; // Add some padding for visual indentation
 
             Object.keys(projects[category]).forEach(repoName => {
                 const repo = repos.find(r => r.name === repoName);
                 const listItem = document.createElement('li');
+                listItem.style.marginBottom = "15px"; // Add margin for spacing between items
 
                 if (projects[category][repoName]) {
-                    listItem.innerHTML = `
-                        <h4>${repoName}</h4>
-                        <p>${projects[category][repoName]}</p>
-                    `;
+                    listItem.innerHTML = `<strong>${repoName}</strong>: ${projects[category][repoName]}`;
                 } else if (repo) {
-                    listItem.innerHTML = `
-                        <h4>${repo.name}</h4>
-                        <p>${repo.description || 'No description available.'}</p>
-                        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-                    `;
+                    let description = repo.description || 'No description available.';
+                    let githubPagesUrl = `https://${username}.github.io/${repoName}/`;
+                    listItem.innerHTML = `<strong>${repo.name}</strong>: ${description}`;
+                    // Check if GitHub Pages is active
+                    if (repo.has_pages) {
+                        listItem.innerHTML += ` <a href="${githubPagesUrl}" target="_blank">(Live Demo)</a>`;
+                    }
+                    listItem.innerHTML += '<p><a href="${repo.html_url}" target="_blank">\nGithub repo link</a></p>'
                 }
+
                 listElement.appendChild(listItem);
             });
 
-            categoryList.appendChild(listElement);
-            projectsSection.querySelector('.categories-list').appendChild(categoryList);
+            categoryItem.appendChild(listElement);
+            categoriesList.appendChild(categoryItem);
         });
-
-        projectsSection.innerHTML += '</ul>'; // End categories list
     } catch (error) {
         console.error('Error fetching GitHub projects:', error);
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
     fetchGitHubProjects();
