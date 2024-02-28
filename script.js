@@ -22,9 +22,15 @@ async function fetchGitHubProjects() {
             "eCommerce": ""
         },
         "Machine Learning": {
+            "Website to Predict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
+                trained and tuned multiple machine learning models including KNN, Logistic Regression, XG Boost, and ANN using \
+                python libraries such as scikit-learn and tensorflow-keras \
+                <a href= 'https://youtu.be/OWa2lT1wkWE' > \
+                (Live Demo)</a></p>",
+
             "Predicting-College-Graduation-Rate": "",
+
             "MLOps_Library": "",
-            "Website to Predict Likelihood Employement": "NICE"
         },
         "Games": {
             "Gravitys-Clutch": "",
