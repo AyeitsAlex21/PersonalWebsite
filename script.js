@@ -71,7 +71,7 @@ async function fetchGitHubProjects() {
                     if (repo.has_pages) {
                         listItem.innerHTML += ` <p><a href="${githubPagesUrl}" target="_blank">(Live Demo)</a></p>`;
                     }
-                    listItem.innerHTML += `<p><a href="https://github.com/AyeitsAlex21/${repo.name}" target="_blank"> Github repo link</a></p>`;
+                    listItem.innerHTML += `<p><a href="https://github.com/${username}/${repo.name}" target="_blank"> Github repo link</a></p>`;
                 }
 
                 listElement.appendChild(listItem);
