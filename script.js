@@ -46,7 +46,7 @@ async function fetchGitHubProjects() {
         const repos = await response.json();
 
         const projectsSection = document.querySelector('#projects');
-        projectsSection.innerHTML = '<h2>Relvant Projects</h2><ul class="categories-list" style="list-style-type: none;"></ul>'; // Use inline styles for simplicity
+        projectsSection.innerHTML = '<h2>Relevant Projects</h2><ul class="categories-list" style="list-style-type: none;"></ul>'; // Use inline styles for simplicity
 
         const categoriesList = document.querySelector('.categories-list');
 
