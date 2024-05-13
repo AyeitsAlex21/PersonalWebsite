@@ -19,7 +19,8 @@ async function fetchGitHubProjects() {
             "Dynamicly-Changing-Node-Topology": ""
         },
         "Full-Stack": {
-            "eCommerce": ""
+            "eCommerce": "",
+            "Video-Streaming": "",
         },
         "Machine Learning": {
             "Website to Predict Likelihood Employement": "Using the Employee dataset from kaggle I wrangled the data, \
